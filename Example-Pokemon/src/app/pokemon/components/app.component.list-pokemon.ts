@@ -5,7 +5,7 @@ import { POKEMONS } from '../mocks/app.mock.pokemon';
 
 @Component({
     selector: 'list-pokemon',
-    templateUrl: '../../app/templates/app.template.pokemon-list.html'
+    templateUrl: './app/pokemon/templates/app.template.pokemon-list.html'
 })
 export class ListPokemonComponent implements OnInit {
 
