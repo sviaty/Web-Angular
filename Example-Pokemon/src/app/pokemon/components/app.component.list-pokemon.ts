@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from '../classes/app.class.pokemon';
 import { PokemonsService } from "../services/app.service.pokemon";
+import {Observable} from "rxjs";
 
 @Component({
     selector: 'list-pokemon',
@@ -12,10 +13,12 @@ export class ListPokemonComponent implements OnInit {
     pokemons: Pokemon[] = null;
 
     constructor(private router: Router,
-                private pokemonService: PokemonsService) { }
+                private pokemonsService: PokemonsService) { }
 
     ngOnInit(): void {
-        this.pokemons = this.pokemonService.getPokemons();
+        //this.pokemon = this.pokemonService.getPokemons();
+        this.pokemonsService.getPokemons()
+            .subscribe(pokemons => this.pokemons = pokemons);
     }
 
     selectPokemon(pokemon: Pokemon): void {
@@ -23,5 +26,7 @@ export class ListPokemonComponent implements OnInit {
         let link = ['/pokemon', pokemon.id];
         this.router.navigate(link);
     }
+
+
 
 }
