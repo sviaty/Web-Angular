@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-import { Pokemon } from '../classes/app.class.pokemon';
-import { PokemonsService } from "../services/app.service.pokemon";
+import { Pokemon } from '../classes/class.pokemon';
+import { PokemonsService } from "../services/service.pokemon";
 
 @Component({
     selector: 'detail-pokemon',
-    templateUrl: './app/pokemon/templates/views/app.template.detail-pokemon.html'
+    templateUrl: './app/pokemon/templates/views/template.detail-pokemon.html'
 })
 export class DetailPokemonComponent implements OnInit {
 
@@ -24,7 +24,7 @@ export class DetailPokemonComponent implements OnInit {
     }
 
     goBack(): void {
-        this.router.navigate(['/pokemons']);
+        this.router.navigate(['/pokemon/all']);
     }
 
     delete(pokemon: Pokemon): void {

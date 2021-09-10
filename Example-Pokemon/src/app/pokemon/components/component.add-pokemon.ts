@@ -1,9 +1,9 @@
 import {Component, OnInit} from "@angular/core";
-import { Pokemon } from "../classes/app.class.pokemon";
+import { Pokemon } from "../classes/class.pokemon";
 
 @Component({
     selector: 'add-pokemon',
-    templateUrl: './app/pokemon/templates/views/app.template.add-pokemon.html'
+    templateUrl: './app/pokemon/templates/views/template.add-pokemon.html'
 })
 export class AddPokemonComponent implements OnInit {
 

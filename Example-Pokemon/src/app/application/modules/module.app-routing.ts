@@ -1,9 +1,9 @@
 import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
-import { PageNotFoundComponent } from "../components/app.component.page-not-found";
+import { PageNotFoundComponent } from "../components/component.page-not-found";
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'pokemons', pathMatch: 'full' },
+    { path: '', redirectTo: 'pokemon/all', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];
 

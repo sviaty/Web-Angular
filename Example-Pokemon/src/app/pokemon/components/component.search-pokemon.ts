@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import { Router } from "@angular/router";
 
-import { Pokemon } from "../classes/app.class.pokemon";
-import { PokemonsService } from "../services/app.service.pokemon";
+import { Pokemon } from "../classes/class.pokemon";
+import { PokemonsService } from "../services/service.pokemon";
 
 import {Observable, Subject} from "rxjs";
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 @Component({
     selector: 'pokemon-search',
-    templateUrl: './app/pokemon/templates/views/app.template.search-pokemon.html'
+    templateUrl: './app/pokemon/templates/views/template.search-pokemon.html'
 })
 export class PokemonSearchComponent implements OnInit {
 

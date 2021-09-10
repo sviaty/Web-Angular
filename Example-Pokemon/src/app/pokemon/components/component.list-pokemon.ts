@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pokemon } from '../classes/app.class.pokemon';
-import { PokemonsService } from "../services/app.service.pokemon";
+import { Pokemon } from '../classes/class.pokemon';
+import { PokemonsService } from "../services/service.pokemon";
 import {Observable} from "rxjs";
 
 @Component({
     selector: 'list-pokemon',
-    templateUrl: './app/pokemon/templates/views/app.template.list-pokemon.html'
+    templateUrl: './app/pokemon/templates/views/template.list-pokemon.html'
 })
 export class ListPokemonComponent implements OnInit {
 
