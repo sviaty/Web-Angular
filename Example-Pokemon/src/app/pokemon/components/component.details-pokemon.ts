@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Pokemon } from '../classes/class.pokemon';
 import { PokemonsService } from "../services/service.pokemon";
+import {Title} from "@angular/platform-browser";
+import {AppContants} from "../../application/contants/constant.app";
 
 @Component({
     selector: 'detail-pokemon',
@@ -14,9 +16,12 @@ export class DetailPokemonComponent implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
-                private pokemonsService: PokemonsService) {}
+                private pokemonsService: PokemonsService,
+                private titleService: Title) {}
 
     ngOnInit(): void {
+        this.titleService.setTitle(AppContants.titleDetailPokemon);
+
         let id = +this.route.snapshot.paramMap.get('id');
         //this.pokemon = this.pokemonService.getPokemon(id);
         this.pokemonsService.getPokemon(id)
