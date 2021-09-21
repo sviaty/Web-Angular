@@ -1,0 +1,25 @@
+.img-size {
+  height: 25px;
+  width: 25px;
+}
+
+.special {
+  color: darkred;
+}
+
+.text-success {
+  text-align: center;
+}
+
+.background-turquoise {
+  background-color: #26a69a;
+}
+
+.background-silver {
+  background-color: silver;
+}
+
+.div-custom {
+  border-radius: 10px;
+  padding: 10px 10px;
+}

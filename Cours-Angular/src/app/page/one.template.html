@@ -1,0 +1,46 @@
+<div class="content" role="main">
+  <h1>Page one</h1>
+  <div>
+    <img class="img-size" [src]="someImageUrl">
+  </div>
+  <div>
+    <div [class.special]="isSpecial">Test liaison</div>
+  </div>
+  <div>
+    <button (click)="OnClick()" class="btn waves-effect waves-light">Test click log</button>
+  </div>
+
+  <div>
+    <div *ngIf="title != null">test de {{ title }}</div>
+  </div>
+  <div>
+    <ul *ngFor="let person of people"
+        [ngSwitch]="person.country">
+      <li *ngSwitchCase="'Ukraine'"
+          class="text-success">{{ person.name }} ({{ person.country }})
+      </li>
+      <li *ngSwitchCase="'France'"
+          class="text-success">{{ person.name }} ({{ person.country }})
+      </li>
+      <li *ngSwitchDefault
+          class="text-warning">{{ person.name }} ({{ person.country }})
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul *ngFor="let person of people"
+        [ngSwitch]="person.country">
+      <li *ngIf="person.age > 30">
+        {{ person.name }} ({{ person.age }})
+      </li>
+    </ul>
+  </div>
+  <div class="div-custom {{ 'Feu' | pageBackgroundColor }}" pageBorderCard="red">
+    test pipe & directive
+  </div>
+  <div>
+    <button (click)="GoOther()" class="btn waves-effect waves-light"> Autre page </button>
+  </div>
+</div>
+
+
