@@ -5,18 +5,22 @@ import {BorderCardDirective} from "./one.directive.border";
 import {AppBackgroundColorPipe} from "./one.pipe.background";
 import {PageRoutingModule} from "./page-routing.module";
 import {TwoComponent} from "./two.component";
+import {FormsModule} from "@angular/forms";
+import {ContactFormComponent} from "./contact-form.component";
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     PageRoutingModule
   ],
   declarations: [
     OneComponent,
+    ContactFormComponent,
     TwoComponent,
     BorderCardDirective,
     AppBackgroundColorPipe
   ],
   providers: []
 })
-export class OneModule { }
+export class PageModule { }

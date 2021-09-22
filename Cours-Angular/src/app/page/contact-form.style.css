@@ -1,0 +1,12 @@
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* bordure verte */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* bordure rouge */
+}
+
+.contact-form {
+  width: 100%;
+  min-width: 600px;
+}
