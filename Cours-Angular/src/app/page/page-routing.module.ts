@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {OneComponent} from "./one.component";
-import {TwoComponent} from "./two.component";
+import {OneComponent} from "./one/one.component";
+import {TwoComponent} from "./two/two.component";
 
 const appRoutes: Routes = [{
   path: 'page',

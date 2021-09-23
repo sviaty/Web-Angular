@@ -3,7 +3,7 @@ import { OnInit } from "@angular/core";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'page',
+  selector: 'one',
   templateUrl: './one.template.html',
   styleUrls: ['./one.style.css']
 })
