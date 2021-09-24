@@ -43,4 +43,9 @@ export class OneComponent implements OnInit {
     let link = ['/page/two'];
     this.router.navigate(link);
   }
+
+  GoLogin(): void {
+    let link = ['/login'];
+    this.router.navigate(link);
+  }
 }

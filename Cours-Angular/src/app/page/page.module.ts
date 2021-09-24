@@ -22,8 +22,9 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   declarations: [
     OneComponent,
-    ContactFormComponent,
     TwoComponent,
+    ContactFormComponent,
+
     BorderCardDirective,
     AppBackgroundColorPipe
   ],

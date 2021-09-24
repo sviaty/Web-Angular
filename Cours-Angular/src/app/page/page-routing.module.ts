@@ -3,7 +3,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {OneComponent} from "./one/one.component";
 import {TwoComponent} from "./two/two.component";
 
-const appRoutes: Routes = [{
+const pageRoutes: Routes = [{
   path: 'page',
   children: [
     {
@@ -19,7 +19,7 @@ const appRoutes: Routes = [{
 
 @NgModule({
   imports: [
-    RouterModule.forChild(appRoutes)
+    RouterModule.forChild(pageRoutes)
   ],
   exports: [
     RouterModule
