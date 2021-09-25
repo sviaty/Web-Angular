@@ -1,4 +1,8 @@
-<div class="content" role="main">
+<div *ngIf="data" class="content" role="main">
   <h1>Page admin</h1>
 
+</div>
+
+<div *ngIf="!data" class="content" role="main">
+  <app-loader></app-loader>
 </div>

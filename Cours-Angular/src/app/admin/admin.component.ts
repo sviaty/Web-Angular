@@ -1,10 +1,9 @@
 import { Component } from "@angular/core";
 import { OnInit } from "@angular/core";
-import {Router} from "@angular/router";
-import {ContactService} from "../page/contact/contact.service";
-import {HttpClient} from "@angular/common/http";
-import {catchError, tap} from "rxjs/operators";
-import {Observable, of} from "rxjs";
+import { AppContants } from "../app.contants";
+import { Title } from "@angular/platform-browser";
+import { delay } from 'rxjs/internal/operators';
+import { of } from "rxjs";
 
 @Component({
   selector: 'admin',
@@ -12,9 +11,27 @@ import {Observable, of} from "rxjs";
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router: Router,
-              private http: HttpClient) { }
+  constructor(private titleService: Title) { }
+
+  data: any = null;
 
   ngOnInit(): void {
+    this.titleService.setTitle(AppContants.titleAdmin);
+
+    this.delayFunction(2000);
   }
+
+  delayFunction(timeDelay: number){
+    of(this.data)
+      .pipe(
+        delay(timeDelay)
+      )
+      .subscribe(
+        val => this.data = 1,
+        e => console.log(e),
+        () => console.log("delay finish")
+      );
+  }
+
+
 }

@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { OnInit } from "@angular/core";
 import {Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
+import {AppContants} from "../../app.contants";
 
 @Component({
   selector: 'one',
@@ -9,7 +11,10 @@ import {Router} from "@angular/router";
 })
 export class OneComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private titleService: Title) { }
+
+
 
   // liaison sur une propriété d'élément
   someImageUrl = './assets/angular-logo.png';
@@ -33,6 +38,7 @@ export class OneComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.titleService.setTitle(AppContants.titlePageOne);
   }
 
   OnClick(){
@@ -48,4 +54,6 @@ export class OneComponent implements OnInit {
     let link = ['/login'];
     this.router.navigate(link);
   }
+
+
 }

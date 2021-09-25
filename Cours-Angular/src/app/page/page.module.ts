@@ -11,6 +11,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./in-memory-data.service";
 import {ContactService} from "./contact/contact.service";
 import {HttpClientModule} from "@angular/common/http";
+import {Title} from "@angular/platform-browser";
 
 @NgModule({
   imports: [

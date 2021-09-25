@@ -5,6 +5,8 @@ import {ContactService} from "../contact/contact.service";
 import {HttpClient} from "@angular/common/http";
 import {catchError, tap} from "rxjs/operators";
 import {Observable, of} from "rxjs";
+import {AppContants} from "../../app.contants";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'two',
@@ -13,9 +15,11 @@ import {Observable, of} from "rxjs";
 export class TwoComponent implements OnInit {
 
   constructor(private router: Router,
-              private http: HttpClient) { }
+              private http: HttpClient,
+              private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(AppContants.titlePageTwo,);
   }
 
   private handleError<T>(operation='operation', result?:T){
